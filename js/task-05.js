@@ -5,7 +5,7 @@ const startText = "Anonymous";
 inputEl.addEventListener("input", inInput);
 
 function inInput(event) {
-  if (event.currentTarget.value === "") {
+  if (event.currentTarget.value.trim() === "") {
     spanEl.textContent = startText;
   } else {
     spanEl.textContent = event.currentTarget.value;

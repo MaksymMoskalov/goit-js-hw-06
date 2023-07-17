@@ -6,7 +6,10 @@ function onFormValidation(event) {
   event.preventDefault();
 
   const formElements = event.currentTarget.elements;
-  if (formElements.email.value === "" || formElements.password.value === "") {
+  if (
+    formElements.email.value.trim() === "" ||
+    formElements.password.value.trim() === ""
+  ) {
     return alert("Всі поля форми повинні бути заповнені");
   }
 
